@@ -31,6 +31,13 @@ type network struct {
 }
 
 var networks = map[string]network{
+	"0xl3": {
+		l2RPC:              "https://rpc.0xl3.com",
+		portalAddress:      "0x0E43Db848cfe6f56e4D0770Ac710EDaAAB424728",
+		l2OOAddress:        "0x8bDEd57b781435A2B9ABa3CB2257e355a8efb09e",
+		disputeGameFactory: "0x0000000000000000000000000000000000000000",
+		faultProofs:        false,
+	},
 	"base-mainnet": {
 		l2RPC:              "https://mainnet.base.org",
 		portalAddress:      "0x49048044D57e1C92A77f79988d21Fa8fAF74E97e",
@@ -81,7 +88,7 @@ func main() {
 	var hdPath string
 
 	flag.StringVar(&rpcFlag, "rpc", "", "Ethereum L1 RPC url")
-	flag.StringVar(&networkFlag, "network", "base-mainnet", fmt.Sprintf("op-stack network to withdraw.go from (one of: %s)", strings.Join(networkKeys, ", ")))
+	flag.StringVar(&networkFlag, "network", "0xl3", fmt.Sprintf("op-stack network to withdraw.go from (one of: %s)", strings.Join(networkKeys, ", ")))
 	flag.StringVar(&l2RpcFlag, "l2-rpc", "", "Custom network L2 RPC url")
 	flag.BoolVar(&faultProofs, "fault-proofs", false, "Use fault proofs")
 	flag.StringVar(&portalAddress, "portal-address", "", "Custom network OptimismPortal address")

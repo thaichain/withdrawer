@@ -51,13 +51,13 @@ Example on Base Sepolia: [0x5e47346867cf87d8e8c82cae1d30a94b8d5587dc9d354aef5c5a
 Prove your withdrawal:
 
 ```
-withdrawer --network base-mainnet --withdrawal <withdrawal tx hash> --rpc <L1 RPC URL> --private-key <L1 private key>
+withdrawer --network 0xl3 --withdrawal <withdrawal tx hash> --rpc <L1 RPC URL> --private-key <L1 private key>
 ```
 
 or use a ledger:
 
 ```
-withdrawer --network base-mainnet --withdrawal <withdrawal tx hash> --rpc <L1 RPC URL> --ledger
+withdrawer --network 0xl3 --withdrawal <withdrawal tx hash> --rpc <L1 RPC URL> --ledger
 ```
 
 Example output:
@@ -75,7 +75,7 @@ _Note: this can be called from any L1 address, it does not have to be the same a
 After the finalization period, finalize your withdrawal (same command as above):
 
 ```
-withdrawer --network base-mainnet --withdrawal <withdrawal tx hash> --rpc <L1 RPC URL> --private-key <L1 private key>
+withdrawer --network 0xl3 --withdrawal <withdrawal tx hash> --rpc <L1 RPC URL> --private-key <L1 private key>
 ```
 
 Example output:
@@ -103,13 +103,13 @@ Example on Base Sepolia: [0x5e47346867cf87d8e8c82cae1d30a94b8d5587dc9d354aef5c5a
 Prove your withdrawal:
 
 ```
-withdrawer --network base-mainnet --withdrawal <withdrawal tx hash> --rpc <L1 RPC URL> --private-key <L1 private key> --fault-proofs
+withdrawer --network 0xl3 --withdrawal <withdrawal tx hash> --rpc <L1 RPC URL> --private-key <L1 private key> --fault-proofs
 ```
 
 or use a ledger:
 
 ```
-withdrawer --network base-mainnet --withdrawal <withdrawal tx hash> --rpc <L1 RPC URL> --ledger --fault-proofs
+withdrawer --network 0xl3 --withdrawal <withdrawal tx hash> --rpc <L1 RPC URL> --ledger --fault-proofs
 ```
 
 Example output:
@@ -130,7 +130,7 @@ _Note: this can be called from any L1 address, it does not have to be the same a
 After the dispute game has resolved in favor of the root claim AND the finalization period has elapsed, finalize your withdrawal (same command as above):
 
 ```
-withdrawer --network base-mainnet --withdrawal <withdrawal tx hash> --rpc <L1 RPC URL> --private-key <L1 private key> --fault-proofs
+withdrawer --network 0xl3 --withdrawal <withdrawal tx hash> --rpc <L1 RPC URL> --private-key <L1 private key> --fault-proofs
 ```
 
 Example output:
@@ -148,7 +148,7 @@ Usage of withdrawer:
     -rpc string
         Ethereum L1 RPC url
     -network string
-        op-stack network to withdraw.go from (one of: base-mainnet, base-sepolia, op-mainnet, op-sepolia) (default "base-mainnet")
+        op-stack network to withdraw.go from (one of: 0xl3, base-sepolia, op-mainnet, op-sepolia) (default "0xl3")
     -withdrawal string
         TX hash of the L2 withdrawal transaction
     -fault-proofs
